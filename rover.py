@@ -4,4 +4,12 @@ class Rover:
         self.y = y
         self.direction = direction
 
+    def updateX(self, x ):
+        self.x = x
+
+    def updateY(self, y ):
+        self.y = y
+
+
+
     

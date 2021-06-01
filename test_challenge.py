@@ -22,3 +22,10 @@ def test_checkRover_direction_isValid():
     assert validateMarsRover.isDirectionValid(rover1) == True
     assert validateMarsRover.isDirectionValid(rover2) == True
     assert validateMarsRover.isDirectionValid(rover3) == False
+
+def test_rover_coordinates_areNotString():
+    rover1 = Rover('6', 2,'N')
+    rover2 = Rover(6 ,'2','N')
+    rover3 = Rover(6, 2,'N')
+    assert validateMarsRover.changeInvalidCoordinate(rover1) == rover3
+    assert validateMarsRover.changeInvalidCoordinate(rover2) == rover3

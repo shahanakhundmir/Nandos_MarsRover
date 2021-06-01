@@ -6,3 +6,10 @@ def isRoverOnPlateau(plateau, rover):
 
 def isDirectionValid(rover):
     return rover.direction == 'N' or rover.direction == 'E' or rover.direction == 'S' or rover.direction == 'W'
+
+def changeInvalidCoordinate(rover):
+    if type(rover.x) == str:
+        rover.updateX(int(rover.x))
+    if type(rover.y) == str:
+        rover.updateY(int(rover.y))
+    return rover
