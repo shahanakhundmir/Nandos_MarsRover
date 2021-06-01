@@ -13,3 +13,8 @@ def changeInvalidCoordinate(rover):
     if type(rover.y) == str:
         rover.setY(int(rover.y))
     return rover
+
+def collisionHasOccured(completedMissions, rover):
+    for completedMission in completedMissions:
+        if completedMission.x == rover.x and completedMission.y == rover.y:
+            return True

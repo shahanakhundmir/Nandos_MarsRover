@@ -19,10 +19,10 @@ def marsRoverChallenge(plateau, roverMissions ):
                         completedMissions.append("Mission Aborted - Rover is no longer on the plateau")
                         error = 1
                         break
-                    #if collisionHasOccured(completedMissions, rover):
-                    #    completedMissions.append("Mission Aborted - Collision has occured")
-                    #    error = 1
-                   #     break
+                    if collisionHasOccured(completedMissions, rover):
+                        completedMissions.append("Mission Aborted - Collision has occured")
+                        error = 1
+                        break
                 else:
                     completedMissions.append("Mission Aborted - Invalid move")
                     error = 1

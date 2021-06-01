@@ -56,3 +56,9 @@ def test_rover_notOnPlateau_errorMessage():
 def test_rover_invalidMove_errorMessage():
     plateau = Plateau(5,5)
     assert marsRover.marsRoverChallenge(plateau,[(Rover(4,3,'W'),"RRWRM")]) == ['Mission Aborted - Invalid move']
+
+def test_rover_collision_errorMessage():
+    plateau = Plateau(5,5)
+    #Rover(5,2,'S')
+    assert marsRover.marsRoverChallenge(plateau,[(Rover(4,3,'W'),"RRMRM"),
+     (Rover(5,1,'E'),"LMM")]) == [Rover(5,2,'S'), 'Mission Aborted - Collision has occured']
