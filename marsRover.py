@@ -1,6 +1,6 @@
 from validateMarsRover import *#collisionHasOccured, isPlateauValid, isRoverOnPlateau, isDirectionValid, checkCoordinatedAreValid
 from moveMarsRover import moveRoverForward, changeRoverDirection
-#from formatMissionData import outputAsString
+from formatMissionData import outputAsString
 
 
 def marsRoverChallenge(plateau, roverMissions ):
@@ -30,5 +30,5 @@ def marsRoverChallenge(plateau, roverMissions ):
         # only capture the rovers mission if it has been successful
         if error == 0:     
             completedMissions.append(rover)
-        #outputAsString(completedMissions)
+        outputAsString(completedMissions)
     return completedMissions
