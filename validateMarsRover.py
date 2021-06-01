@@ -9,7 +9,7 @@ def isDirectionValid(rover):
 
 def changeInvalidCoordinate(rover):
     if type(rover.x) == str:
-        rover.updateX(int(rover.x))
+        rover.setX(int(rover.x))
     if type(rover.y) == str:
-        rover.updateY(int(rover.y))
+        rover.setY(int(rover.y))
     return rover

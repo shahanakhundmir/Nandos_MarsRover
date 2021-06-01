@@ -4,11 +4,20 @@ class Rover:
         self.y = y
         self.direction = direction
 
-    def updateX(self, x ):
+    def setX(self, x ):
         self.x = x
 
-    def updateY(self, y ):
+    def setY(self, y ):
         self.y = y
+
+    def setDirection(self, direction ):
+        self.direction = direction
+
+    def __eq__(self, other):
+        if self.x == other.x and self.y == other.y and self.direction == other.direction:
+            return True
+        else:
+            return False    
 
 
 
