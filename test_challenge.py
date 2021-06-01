@@ -15,3 +15,10 @@ def test_checkRover_position_isWithinPlateau():
     assert validateMarsRover.isRoverOnPlateau(plateau, rover1) == False
     assert validateMarsRover.isRoverOnPlateau(plateau, rover2) == True
 
+def test_checkRover_direction_isValid():
+    rover1 = Rover(6, 2,'N')
+    rover2 = Rover(6 ,2,'E')
+    rover3 = Rover(6 ,2,'P')
+    assert validateMarsRover.isDirectionValid(rover1) == True
+    assert validateMarsRover.isDirectionValid(rover2) == True
+    assert validateMarsRover.isDirectionValid(rover3) == False
