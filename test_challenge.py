@@ -47,3 +47,8 @@ def test_rover_seriesOfMoves_newPosition():
     plateau = Plateau(5,5)
     assert marsRover.marsRoverChallenge(plateau,[(Rover(4, 3,'W'),"RRMRM"),(Rover(2, 2,'S'),"LMMLM")]) == [Rover(5, 2, 'S'), Rover(4, 3, 'N')]
     assert marsRover.marsRoverChallenge(plateau,[(Rover(1, 2, 'N'),"LMLMLMLMM"),(Rover(3, 3, 'E'),"MMRMMRMRRM")]) == [Rover(1, 3, 'N'),Rover(5, 1, 'E')]
+
+def test_rover_notOnPlateau_errorMessage():
+    plateau = Plateau(5,5)
+    assert marsRover.marsRoverChallenge(plateau,[(Rover(4, 3,'W'),"RRMRM"),
+     (Rover(4, 4, 'E'),"MMLM")]) == [Rover(5, 2,'S'), 'Mission Aborted - Rover is no longer on the plateau']
