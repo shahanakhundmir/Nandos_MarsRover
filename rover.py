@@ -1,24 +1,31 @@
 class Rover:
     def __init__(self, x, y, direction):
-        self.x = x
-        self.y = y
-        self.direction = direction
+        self._x = x
+        self._y = y
+        self._direction = direction
 
-    def setX(self, x ):
-        self.x = x
+    def set_x(self, x ):
+        self._x = x
 
-    def setY(self, y ):
-        self.y = y
+    def set_y(self, y ):
+        self._y = y
 
-    def setDirection(self, direction ):
-        self.direction = direction
+    def set_direction(self, direction ):
+        self._direction = direction
+
+    def get_x(self):
+        return self._x
+
+    def get_y(self):
+        return self._y
+
+    def get_direction(self):
+        return self._direction
 
     def __eq__(self, other):
-        if self.x == other.x and self.y == other.y and self.direction == other.direction:
+        if self._x == other.get_x() and self._y == other.get_y() and self._direction == other.get_direction():
             return True
         else:
             return False    
 
 
-
-    

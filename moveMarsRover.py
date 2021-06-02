@@ -1,32 +1,32 @@
 def changeRoverDirection(rover, newDirection):
     if newDirection == 'R':
-        if rover.direction == 'N': 
-            rover.setDirection('E')
-        elif rover.direction == 'E': 
-            rover.setDirection('S')
-        elif rover.direction == 'S': 
-            rover.setDirection('W')
-        elif rover.direction == 'W': 
-            rover.setDirection('N')
+        if rover.get_direction() == 'N': 
+            rover.set_direction('E')
+        elif rover.get_direction() == 'E': 
+            rover.set_direction('S')
+        elif rover.get_direction() == 'S': 
+            rover.set_direction('W')
+        elif rover.get_direction() == 'W': 
+            rover.set_direction('N')
 
     elif newDirection == 'L':
-        if rover.direction == 'N': 
-            rover.setDirection('W')
-        elif rover.direction == 'E': 
-            rover.setDirection('N')
-        elif rover.direction == 'S': 
-            rover.setDirection('E')
-        elif rover.direction == 'W': 
-            rover.setDirection('S')
+        if rover.get_direction() == 'N': 
+            rover.set_direction('W')
+        elif rover.get_direction() == 'E': 
+            rover.set_direction('N')
+        elif rover.get_direction() == 'S': 
+            rover.set_direction('E')
+        elif rover.get_direction() == 'W': 
+            rover.set_direction('S')
     return rover
 
 def moveRoverForward(rover):
-    if rover.direction == 'N':
-        rover.setY(rover.y + 1)
-    elif rover.direction == 'S': 
-        rover.setY(rover.y - 1)
-    elif rover.direction == 'E': 
-        rover.setX(rover.x + 1)
-    elif rover.direction == 'W': 
-        rover.setX(rover.x -1)
+    if rover.get_direction() == 'N':
+        rover.set_y(rover.get_y() + 1)
+    elif rover.get_direction() == 'S': 
+        rover.set_y(rover.get_y() - 1)
+    elif rover.get_direction() == 'E': 
+        rover.set_x(rover.get_x() + 1)
+    elif rover.get_direction() == 'W': 
+        rover.set_x(rover.get_x() -1)
     return rover

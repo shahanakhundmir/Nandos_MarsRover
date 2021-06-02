@@ -1,20 +1,20 @@
 def isPlateauValid(plateau):
-    return plateau.x > 0 and plateau.y > 0 
+    return plateau.get_x() > 0 and plateau.get_y() > 0 
 
 def isRoverOnPlateau(plateau, rover):
-    return plateau.x >= rover.x and rover.x >= 0 and plateau.y >= rover.y and rover.y >= 0
+    return plateau.get_x() >= rover.get_x() and rover.get_x() >= 0 and plateau.get_y() >= rover.get_y() and rover.get_y() >= 0
 
 def isDirectionValid(rover):
-    return rover.direction == 'N' or rover.direction == 'E' or rover.direction == 'S' or rover.direction == 'W'
+    return rover.get_direction() == 'N' or rover.get_direction() == 'E' or rover.get_direction() == 'S' or rover.get_direction() == 'W'
 
 def changeInvalidCoordinate(rover):
-    if type(rover.x) == str:
-        rover.setX(int(rover.x))
-    if type(rover.y) == str:
-        rover.setY(int(rover.y))
+    if type(rover.get_x()) == str:
+        rover.set_x(int(rover.get_x()))
+    if type(rover.get_y()) == str:
+        rover.set_y(int(rover.get_y()))
     return rover
 
 def collisionHasOccured(completedMissions, rover):
     for completedMission in completedMissions:
-        if completedMission.x == rover.x and completedMission.y == rover.y:
+        if completedMission.get_x() == rover.get_x() and completedMission.get_y() == rover.get_y():
             return True

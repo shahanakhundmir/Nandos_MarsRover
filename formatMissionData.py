@@ -3,4 +3,4 @@ def outputAsString(missionData):
         if type(data)== str:
             print(data)
         else:
-            print(f"{data.x} {data.y} {data.direction}")
+            print(f"{data.get_x()} {data.get_y()} {data.get_direction()}")

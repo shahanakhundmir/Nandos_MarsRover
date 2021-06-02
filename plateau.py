@@ -1,7 +1,13 @@
 class Plateau:
     def __init__(self, x, y):
-        self.x = x
-        self.y = y
+        self._x = x
+        self._y = y
 
-    def coordinates(self):
-        return (self.x, self.y)
+    def get_x(self):
+        return self._x
+
+    def get_y(self):
+        return self._y
+
+
+       
