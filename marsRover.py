@@ -7,9 +7,10 @@ def marsRoverChallenge(plateau, roverMissions ):
     completedMissions = []
     error = 0
     for roverMission in roverMissions:
-        rover = changeInvalidCoordinate(roverMission[0])
+        rover = roverMission[0]
+        rover.changeInvalidCoordinate()
         movements = roverMission[1]
-        if isPlateauValid(plateau) and isRoverOnPlateau(plateau, rover) and isDirectionValid(rover):
+        if plateau.isPlateauValid() and isRoverOnPlateau(plateau, rover) and rover.isDirectionValid():
             for move in movements:
                 if move == "R" or move == "L":
                     changeRoverDirection(rover, move)

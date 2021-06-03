@@ -28,4 +28,12 @@ class Rover:
         else:
             return False    
 
+    def isDirectionValid(self):
+        return self._direction == 'N' or self._direction == 'E' or self._direction == 'S' or self._direction == 'W'
+
+    def changeInvalidCoordinate(self):
+        if type(self._x) == str:
+            self._x = int(self._x)
+        if type(self._y) == str:
+            self._y = int(self._y)
 

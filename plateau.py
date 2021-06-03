@@ -10,4 +10,5 @@ class Plateau:
         return self._y
 
 
-       
+    def isPlateauValid(self):
+        return self._x > 0 and self._y > 0 
