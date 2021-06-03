@@ -29,7 +29,10 @@ class Rover:
             return False    
 
     def isDirectionValid(self):
-        return self._direction == 'N' or self._direction == 'E' or self._direction == 'S' or self._direction == 'W'
+        if self._direction == 'N' or self._direction == 'E' or self._direction == 'S' or self._direction == 'W':
+            return True
+        else:
+            raise ValueError ('Rover has invalid compass')
 
     def changeInvalidCoordinate(self):
         if type(self._x) == str:
