@@ -22,7 +22,7 @@
 
 ## Cases to check ✔️
 :star: Collision - if the current rover is at the same position that a previous rover mission ended at, then a collision has occured
-  Print a message about the collision and abort the mission
+  Abort the rover's mission
 
 :star: Before the rover starts its journey and after each move, check that the rover is still on the plateau
   If not then abort the mission
@@ -47,6 +47,7 @@ ValueErrors are generated for:
 
 :star: Collision between 2 Rovers
 
+:star: Invalid move will abort the rover and return a string output, but the mission will still continue for other rovers
 
 ## Testing 📑
 :star: Tests have been carried out on isolated functions
