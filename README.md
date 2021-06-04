@@ -81,9 +81,9 @@ ValueErrors are generated for:
 
 `python runMarsRoverChallenge.py`
 
-## TO DO ▶️
+## Future Considerations ▶️
 
-:star: Using Docker to package the code and environment variables into a container
+:star: Consider Docker to create a Python container to reduce the overhead of installing Python and its dependencies for local development purposes
 
 
 
