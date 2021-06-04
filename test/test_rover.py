@@ -3,7 +3,6 @@ import sys
 sys.path.append('./src')
 from rover import Rover
 
-
 def test_checkRover_direction_isValid():
     assert Rover(6,2,'N').is_direction_valid() == True
     assert Rover(6,2,'E').is_direction_valid() == True
@@ -16,6 +15,3 @@ def test_rover_coordinates_areNotString():
 
     rover1  = Rover(6, '2','N').change_invalid_coordinate()
     assert rover1.get_y() == 2
-
-    #assert Rover('6' ,2,'N').change_invalid_coordinate().__eq__(Rover(6, 2,'N'))
-    #assert Rover(6 ,'2','N').change_invalid_coordinate().__eq__(Rover(6, 2,'N'))

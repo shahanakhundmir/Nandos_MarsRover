@@ -27,7 +27,6 @@ def mars_rover_challenge(plateau, roverMissions ):
                     completedMissions.append("Mission Aborted - Invalid move")
                     error = 1
                     break
-        # only capture the rovers mission if it has been successful
         if error == 0:     
             completedMissions.append(rover)
     output_as_string(completedMissions)
