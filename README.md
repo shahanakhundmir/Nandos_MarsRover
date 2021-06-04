@@ -1,3 +1,5 @@
+# Mars Rover Challenge :oncoming_automobile:
+
 ## Strategy 👷‍♀️
 ⭐ Approached task using TDD and OOP
 
@@ -5,9 +7,11 @@
 
 ⭐ Separation of Concerns
 
-    🟣 Validation of inputs and movements
+    🟣 The Mars Rover and validating it's coordinates
   
-    🟣 Moving the Rover
+    🟣 The Plateau and validating it 
+    
+    🟣 Rover movements
   
     🟣 Formatting the data for output in specified format
     
@@ -16,15 +20,12 @@
 ⭐ Building these functions into the main body of the challenge
  
 
-
-## Mars Rover Challenge :oncoming_automobile:
-
-### Cases to check ✔️
+## Cases to check ✔️
 :star: Collision - if the current rover is at the same position that a previous rover mission ended at, then a collision has occured
-  Print a message about the collision and abort the mission
+  Abort the rover's mission
 
 :star: Before the rover starts its journey and after each move, check that the rover is still on the plateau
-  If not then print an error message and abort the mission
+  If not then abort the mission
 
 :star: If initial plateau coordinates are (0,0) an error has occured and the mission cannot continue
 
@@ -33,10 +34,20 @@
 :star: Check that move is L, R or M 
 
 
-
 ## Written using Python 🐍
 
+## Exceptions ❎
+ValueErrors are generated for:
 
+:star: Invalid Compass
+
+:star: Invalid Plateau coordinates
+
+:star: If the rover is not on the Plateau
+
+:star: Collision between 2 Rovers
+
+🌟: Invalid move will abort the rover and return a string output, but the mission will still continue for other rovers
 
 ## Testing 📑
 :star: Tests have been carried out on isolated functions
@@ -54,20 +65,16 @@
 :star: The Rover Missions object format output is converted to String as per the specification and printed to screen
 
 
-
-
-
 ## To Run 🏃‍♂️
-💻 Download and Install Python from https://www.python.org/downloads/
 
-📂 GitHub - create a folder on your local computer and from the command line run 
+📁 git clone https://github.com/shahanakhundmir/Nandos_MarsRover.git
 
-git clone https://github.com/shahanakhundmir/MarsRover.git
+🧪 There are 3 test files, to execute these run the following command:
 
-📁 Open the created folder in VS Code
+`python -m pytest`
 
-:star: Control + Shift + P - and select pytest as testing framework
+:computer: To run the challenge with preloaded input, run the following command:
 
-🧪 From Left sidebar the test symbol should appear, click on this to see all tests
+`python runMarsRoverChallenge.py`
 
-Run tests from this section : ✔️ means that tests are running
+
