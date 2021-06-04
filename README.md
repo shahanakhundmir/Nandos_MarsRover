@@ -69,12 +69,19 @@ ValueErrors are generated for:
 
 📁 git clone https://github.com/shahanakhundmir/Nandos_MarsRover.git
 
-🧪 There are 3 test files, to execute these run the following command:
+`Install Python 3.7 or higher`
+
+`Install Pytest using pip`
+
+🧪 There are 3 test files, to execute these run the following command from within the 'test' folder:
 
 `python -m pytest`
 
-:computer: To run the challenge with preloaded input, run the following command:
+:computer: To run the challenge with preloaded input, run the following command from within the 'src' folder:
 
 `python runMarsRoverChallenge.py`
+
+### TO DO
+
 
 
