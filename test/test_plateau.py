@@ -1,6 +1,6 @@
 import pytest
 import sys
-sys.path.append('../src')
+sys.path.append('./src')
 from plateau import Plateau
 
 def test_checkPlateau_size_isnotNull():

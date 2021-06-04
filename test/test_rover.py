@@ -1,6 +1,6 @@
 import pytest
 import sys
-sys.path.append('../src')
+sys.path.append('./src')
 from rover import Rover
 
 
@@ -11,12 +11,11 @@ def test_checkRover_direction_isValid():
         Rover(6,2,'P').is_direction_valid()
 
 def test_rover_coordinates_areNotString():
-    Rover('6', 2,'N').change_invalid_coordinate()
-   # assert .get_x() == 6
+    rover1  = Rover('6', 2,'N').change_invalid_coordinate()
+    assert rover1.get_x() == 6
 
+    rover1  = Rover(6, '2','N').change_invalid_coordinate()
+    assert rover1.get_y() == 2
 
-    #assert rover1.get_x() == 6
     #assert Rover('6' ,2,'N').change_invalid_coordinate().__eq__(Rover(6, 2,'N'))
     #assert Rover(6 ,'2','N').change_invalid_coordinate().__eq__(Rover(6, 2,'N'))
-    #assert Rover(6 ,'2','N').change_invalid_coordinate() == 2
-    #assert type(Rover('6', 2,'N').change_invalid_coordinate().get_x()) == int 
