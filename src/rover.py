@@ -39,4 +39,5 @@ class Rover:
             self._x = int(self._x)
         if type(self._y) == str:
             self._y = int(self._y)
+        return self
 

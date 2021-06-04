@@ -1,3 +1,6 @@
+import sys
+sys.path.append('./src')
+
 from validateMarsRover import is_rover_on_plateau, collision_has_occured 
 from formatMissionData import output_as_string
 from rover import Rover

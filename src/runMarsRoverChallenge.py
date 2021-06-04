@@ -1,3 +1,6 @@
+import sys
+sys.path.append('./src')
+
 from marsRover import mars_rover_challenge
 from rover import Rover
 from plateau import Plateau
