@@ -1,8 +1,12 @@
-from src.rover import Rover
-from src.plateau import Plateau
-import src.validateMarsRover #import is_rover_on_plateau 
-import src.marsRover# import change_rover_direction, move_rover_forward, mars_rover_challenge
 import pytest
+import sys
+sys.path.append('../src')
+
+import validateMarsRover
+import marsRover
+from rover import Rover
+from plateau import Plateau
+
 
 def test_rover_direction_changeRight():
     assert marsRover.change_rover_direction(Rover(6, 2,'N'), 'R').__eq__(Rover(6, 2,'E'))
