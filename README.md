@@ -73,7 +73,7 @@ ValueErrors are generated for:
 
 `Install Pytest using pip`
 
-🧪 There are 3 test files, to execute these run the following command from within the 'test' folder:
+🧪 There are 3 test files, to execute these run the following command from the root folder:
 
 `python -m pytest`
 
