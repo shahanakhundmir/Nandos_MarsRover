@@ -39,15 +39,15 @@
 ## Exceptions ❎
 ValueErrors are generated for:
 
-:star: Invalid Inputs
+:star: Invalid Compass
 
 :star: Invalid Plateau coordinates
 
-:star: If the rover is no longer on the Plateau
+:star: If the rover is not on the Plateau
 
 :star: Collision between 2 Rovers
 
-:star: Invalid move will abort the rover and return a string output, but the mission will still continue for other rovers
+🌟: Invalid move will abort the rover and return a string output, but the mission will still continue for other rovers
 
 ## Testing 📑
 :star: Tests have been carried out on isolated functions
