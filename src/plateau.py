@@ -9,7 +9,7 @@ class Plateau:
     def get_y(self):
         return self._y
 
-    def isPlateauValid(self):
+    def is_plateau_valid(self):
         if self._x <= 0 and self._y <= 0:
             raise ValueError('Invalid Plateau coordinates')
         else:

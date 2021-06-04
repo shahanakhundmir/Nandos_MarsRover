@@ -28,13 +28,13 @@ class Rover:
         else:
             return False    
 
-    def isDirectionValid(self):
+    def is_direction_valid(self):
         if self._direction == 'N' or self._direction == 'E' or self._direction == 'S' or self._direction == 'W':
             return True
         else:
             raise ValueError ('Rover has invalid compass')
 
-    def changeInvalidCoordinate(self):
+    def change_invalid_coordinate(self):
         if type(self._x) == str:
             self._x = int(self._x)
         if type(self._y) == str:

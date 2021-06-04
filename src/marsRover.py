@@ -1,24 +1,24 @@
-from validateMarsRover import isRoverOnPlateau, collisionHasOccured 
-from formatMissionData import outputAsString
+from validateMarsRover import is_rover_on_plateau, collision_has_occured 
+from formatMissionData import output_as_string
 from rover import Rover
 
-def marsRoverChallenge(plateau, roverMissions ):
+def mars_rover_challenge(plateau, roverMissions ):
     completedMissions = []
     
     for roverMission in roverMissions:
         error = 0
         rover = roverMission[0]
-        rover.changeInvalidCoordinate()
+        rover.change_invalid_coordinate()
         movements = roverMission[1]
-        if plateau.isPlateauValid() and isRoverOnPlateau(plateau, rover) and rover.isDirectionValid():
+        if plateau.is_plateau_valid() and is_rover_on_plateau(plateau, rover) and rover.is_direction_valid():
             for move in movements:
                 if move == "R" or move == "L":
-                    changeRoverDirection(rover, move)
+                    change_rover_direction(rover, move)
                 elif move == "M":
-                    moveRoverForward(rover)
-                    if isRoverOnPlateau(plateau, rover):
+                    move_rover_forward(rover)
+                    if is_rover_on_plateau(plateau, rover):
                         pass
-                    if not collisionHasOccured(completedMissions, rover):
+                    if not collision_has_occured(completedMissions, rover):
                         pass
                 else:
                     completedMissions.append("Mission Aborted - Invalid move")
@@ -27,10 +27,10 @@ def marsRoverChallenge(plateau, roverMissions ):
         # only capture the rovers mission if it has been successful
         if error == 0:     
             completedMissions.append(rover)
-    outputAsString(completedMissions)
+    output_as_string(completedMissions)
     return completedMissions
 
-def changeRoverDirection(rover, newDirection):
+def change_rover_direction(rover, newDirection):
     if newDirection == 'R':
         if rover.get_direction() == 'N': 
             rover.set_direction('E')
@@ -52,7 +52,7 @@ def changeRoverDirection(rover, newDirection):
             rover.set_direction('S')
     return rover
 
-def moveRoverForward(rover):
+def move_rover_forward(rover):
     if rover.get_direction() == 'N':
         rover.set_y(rover.get_y() + 1)
     elif rover.get_direction() == 'S': 

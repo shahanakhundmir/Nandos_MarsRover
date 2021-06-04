@@ -1,4 +1,4 @@
-from marsRover import marsRoverChallenge
+from marsRover import mars_rover_challenge
 from rover import Rover
 from plateau import Plateau
 
@@ -8,6 +8,6 @@ print("Rover(1, 2, 'N'), directions: LMLMLMLMM ")
 print("Rover(3, 3, 'E'), directions: MMRMMRMRRM ")
 print('The result is: ')
 
-marsRoverChallenge(Plateau(5,5),[(Rover(1, 2, 'N'),"LMLMLMLMM"),(Rover(3, 3, 'E'),"MMRMMRMRRM")]) 
+mars_rover_challenge(Plateau(5,5),[(Rover(1, 2, 'N'),"LMLMLMLMM"),(Rover(3, 3, 'E'),"MMRMMRMRRM")]) 
 
 
