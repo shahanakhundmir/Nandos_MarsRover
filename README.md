@@ -73,6 +73,8 @@ ValueErrors are generated for:
 
 `Install Pytest using pip`
 
+If you have an earlier version for Python already installed you would need to run 'python3' instead of 'python'
+
 🧪 There are 3 test files, to execute these run the following command from the root folder:
 
 `python -m pytest`
